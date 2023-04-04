@@ -42,16 +42,16 @@ const Header = () => {
           <a href="/" className="hover:text-accent transition">
             Home
           </a>
-          <a href="rooms" className="hover:text-accent transition">
+          <a href="/rooms" className="hover:text-accent transition">
             Rooms
           </a>
-          <a href="room/4" className="hover:text-accent transition">
+          <a href="/room/4" className="hover:text-accent transition">
             Restaurant
           </a>
-          <a href="room/5" className="hover:text-accent transition">
+          <a href="/room/5" className="hover:text-accent transition">
             Meeting Hall
           </a>
-          <a href="location" className="hover:text-accent transition">
+          <a href="/location" className="hover:text-accent transition">
             Location
           </a>
           <a href="#" className="hover:text-accent transition">
