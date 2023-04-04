@@ -1,14 +1,9 @@
-import React, { useContext, useState } from "react";
-import { BsCalendar } from "react-icons/bs";
+import React, {useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 
-//room context
-import { RoomContext } from "../context/RoomContext";
 //headless ui menu
 import { Menu } from "@headlessui/react";
-import Details from "./Details";
-//icons
-// import { BsChevronDown } from 'react-icons/bs';
+
 
 const NumberDetails = () => {
   const [mobile, Setmobile] = useState();

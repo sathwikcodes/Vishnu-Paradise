@@ -1,10 +1,11 @@
+/* eslint-disable no-template-curly-in-string */
 import React from "react";
 import { BsArrowsFullscreen } from "react-icons/bs";
 
 //link
 import { Link } from "react-router-dom";
 //icons
-import { BsArrowFullscreen, BsPeople } from "react-icons/bs";
+import { BsPeople } from "react-icons/bs";
 
 const Room = ({ room }) => {
   //destructure room

@@ -5,14 +5,12 @@ import Footer from "./components/Footer";
 //pages
 import Home from "./pages/Home";
 import RoomDetails from "./pages/RoomDetails";
-import Restaurant from './pages/Restaurant';
 import Location from "./pages/Location";
 
 //react Router
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Rooms from "./components/Rooms";
-import Meetinghall from "./pages/Meetinghall";
+import Rooms from "./components/Rooms"
 import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([

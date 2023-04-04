@@ -5,7 +5,6 @@ import { RoomContext } from "../context/RoomContext";
 import Room from "../components/Room";
 //loader
 import { SpinnerDotted } from "spinners-react";
-import Header from "./Header";
 
 const Rooms = () => {
   const { rooms, loading } = useContext(RoomContext);

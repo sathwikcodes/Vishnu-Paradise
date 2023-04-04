@@ -9,7 +9,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import "../datepicker.css";
 //icons
 
-import { Bscalendar } from "react-icons/bs";
 
 const CheckOut = () => {
   const [EndDate, setEndDate] = useState(false);

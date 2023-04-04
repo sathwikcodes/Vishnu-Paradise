@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 
@@ -5,11 +6,9 @@ import React, { useEffect, useState } from "react";
 //logo
 import LogoWhite from "../assets/img/logo-white.svg";
 import LogoDark from "../assets/img/logo-dark.svg";
-import AdultsDropdown from "./AdultsDropdown";
 //headless ui menu
 import { Menu } from "@headlessui/react";
 //icons
-import { BsChevronDown } from "react-icons/bs";
 const Header = () => {
 
   const [header, setHeader] = useState(false);
