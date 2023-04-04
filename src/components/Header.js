@@ -1,11 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
-
-
-//logo
-import LogoWhite from "../assets/img/logo-white.svg";
-import LogoDark from "../assets/img/logo-dark.svg";
 //headless ui menu
 import { Menu } from "@headlessui/react";
 //icons
