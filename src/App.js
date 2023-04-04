@@ -15,23 +15,23 @@ import Contact from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <Home />,
   },
   {
-    path: "/room/:id",
+    path: "room/:id",
     element: <RoomDetails />,
   },
   {
-    path: "/rooms",
+    path: "rooms",
     element: <Rooms />,
   },
   {
-    path: "/location",
+    path: "location",
     element: <Location />,
   },
   {
-    path: "/contact",
+    path: "contact",
     element: <Contact />,
   },
 ]);
