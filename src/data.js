@@ -160,7 +160,7 @@ export const roomData = [
     description:
       "Book our restaurant that has a capacity of 50 members for your needs Now.",
       pricePerPerson : [
-        {name : "50 Persons" , price : 2240 },
+        {name : "For 1 Hour" , price : 1500 },
       ],
       
     facilities: [
@@ -186,7 +186,7 @@ export const roomData = [
     ],
     size: "40",
     maxPerson: 50,
-    price: 289,
+    price: 1500,
     image: Room4Img,
     imageLg: Room4ImgLg,
   },
@@ -195,7 +195,7 @@ export const roomData = [
     id: 5,
     name: "Meeting Hall",
     pricePerPerson : [
-      {name : "20 Persons" , price : 2240 },
+      {name : "For 1 Hour" , price : 1000 },
     ],
     description:
       "Meeting Hall that can contain 20 persons with no disturbance throughout your meeting time.",
@@ -223,7 +223,7 @@ export const roomData = [
     ],
     size: "25",
     maxPerson: 20,
-    price: 320,
+    price: 1000,
     image: Room5Img,
     imageLg: Room5ImgLg,
   },
