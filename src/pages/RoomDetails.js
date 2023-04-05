@@ -5,10 +5,10 @@ import { addDoc, collection } from "firebase/firestore";
 import { Menu } from "@headlessui/react";
 import { BsCalendar } from "react-icons/bs";
 import { BsChevronDown } from "react-icons/bs";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 //components
-import AdultsDropdown from "../components/AdultsDropdown";
-import KidsDropdown from "../components/KidsDropdown";
 // import CheckOut from "../components/CheckOut";
 // import CheckIn from "../components/CheckIn";
 // import Details from "../components/Details";
@@ -38,19 +38,21 @@ const RoomDetails = () => {
   const userCollectionRef = collection(db, "CustomerData");
 
   const handleSubmit = () => {
-
     var today = new Date();
     addDoc(userCollectionRef, {
       name: username,
       mobile: mobile,
-      bookingtime : today.toLocaleString('en-US', { hour: 'numeric',minute: 'numeric', hour12: true }),
+      bookingtime: today.toLocaleString("en-US", {
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      }),
       roomname: { name },
-      checkIndate: startDate.toJSON().slice(0,10).replace(/-/g,'/'),
-      checkOutdate: EndDate.toJSON().slice(0,10).replace(/-/g,'/')
+      checkIndate: startDate.toJSON().slice(0, 10).replace(/-/g, "/"),
+      checkOutdate: EndDate.toJSON().slice(0, 10).replace(/-/g, "/"),
     })
       .then(() => {
-        if (!alert("Successfully Booked!"))
-          document.location = "http://localhost:3000/";
+        if (!alert("Successfully Booked!")) document.location = "/";
       })
       .catch((error) => {
         alert(error.message);
@@ -65,9 +67,25 @@ const RoomDetails = () => {
   const room = rooms.find((room) => {
     return room.id === Number(id);
   });
+
+
+  const divStyle = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundSize: "cover",
+    height: "400px",
+  };
   //destructure room
 
-  const { name, description, facilities, imageLg, price } = room;
+  const {
+    name,
+    description,
+    pricePerPerson,
+    facilities,
+    slideImages,
+    price,
+  } = room;
 
   return (
     <section>
@@ -87,13 +105,40 @@ const RoomDetails = () => {
           <div className="w-full h-full lg:w-[60%] px-6">
             <h2 className="h2">{name}</h2>
             <p className="mb-8">{description}</p>
-            <img className="mb-8" src={imageLg} alt="" />
+            <h2 className="h3">Prices Per Person :</h2>
+            <p>
+              {pricePerPerson.map((item, index) => {
+                const { name, price } = item;
+                return (
+                  <div className="flex items-center gap-x-3 flex-1 space-y-4 ">
+                    <div className="text-base h3 ">{name} -</div>
+                    <div className="text-3xl text-accent mb-15">{price}/-</div>
+                  </div>
+                );
+              })}{" "}
+            </p>
+            <div className="slide-container">
+              <Slide>
+                {slideImages.map((slideImage, index) => (
+                  <div key={index}>
+                    <div
+                      style={{
+                        ...divStyle,
+                        backgroundImage: `url(${slideImage.url})`,
+                      }}
+                    ></div>
+                  </div>
+                ))}
+              </Slide>
+            </div>
+
+            {/* <div>
+            <img className="mb-8" src={imageLg} alt="" /></div> */}
             {/* facilities */}
             <div className="mt-12">
               <h3 className="h3 mb-3">Room Facilities</h3>
               <p className="mb-12">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                The Facilities for the available for {name} :
               </p>
               {/* grid */}
               <div className="grid grid-cols-3 gap-6 mb-12">
@@ -154,41 +199,35 @@ const RoomDetails = () => {
                     />
                   </div>
                 </div>
-                <div className="h-[60px]">
-                  <AdultsDropdown />
-                </div>
-                <div className="h-[60px]">
-                  <KidsDropdown />
-                </div>
 
                 {/* name */}
                 <div className="h-[60px]">
-                    <Menu as="div" className="w-full h-full bg-white relative">
-                      {/* btn */}
-                      <Menu.Button
-                        className={
-                          "w-full h-full flex items-center justify-between px-8"
-                        }
-                      >
-                        <div className=" w-full h-full bg-white relative flex items-center">
-                          <form>
-                            <label>
-                              <input
-                                className="w-full h-full"
-                                type="text"
-                                name="name"
-                                placeholder="Enter your Name"
-                                onChange={(event) => {
-                                  SetUsername(event.target.value);
-                                }}
-                              />
-                            </label>
-                          </form>
-                        </div>
-                        <BsChevronDown className="text-base text-accent-hover" />
-                      </Menu.Button>
-                    </Menu>
-                  </div>
+                  <Menu as="div" className="w-full h-full bg-white relative">
+                    {/* btn */}
+                    <Menu.Button
+                      className={
+                        "w-full h-full flex items-center justify-between px-8"
+                      }
+                    >
+                      <div className=" w-full h-full bg-white relative flex items-center">
+                        <form>
+                          <label>
+                            <input
+                              className="w-full h-full"
+                              type="text"
+                              name="name"
+                              placeholder="Enter your Name"
+                              onChange={(event) => {
+                                SetUsername(event.target.value);
+                              }}
+                            />
+                          </label>
+                        </form>
+                      </div>
+                      <BsChevronDown className="text-base text-accent-hover" />
+                    </Menu.Button>
+                  </Menu>
+                </div>
 
                 {/* number */}
                 <div className="h-[60px]">
@@ -224,7 +263,7 @@ const RoomDetails = () => {
                 className="btn btn-lg btn-primary w-full"
                 onClick={handleSubmit}
               >
-                Book now for ${price}
+                Book now for ₹{price}
               </button>
             </div>
 
@@ -232,21 +271,20 @@ const RoomDetails = () => {
             <div>
               <h3 className="h3">Hotel Rules</h3>
               <p className="mb-6">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                Rules and Regulations that should be followed :
               </p>
               <ul className="flex flex-col gap-y-4">
                 <li className="flex items-center gap-x-4">
                   <FaCheck className="text-accent" />
-                  Check-in 3:00 PM - 9:00 PM
+                  Check-in 12:00 PM
                 </li>
                 <li className="flex items-center gap-x-4">
                   <FaCheck className="text-accent" />
-                  Check-out 3:00 PM - 9:00 PM
+                  Check-out 12:00 AM
                 </li>
                 <li className="flex items-center gap-x-4">
                   <FaCheck className="text-accent" />
-                  No Pets
+                  No Alcohol
                 </li>
                 <li className="flex items-center gap-x-4">
                   <FaCheck className="text-accent" />

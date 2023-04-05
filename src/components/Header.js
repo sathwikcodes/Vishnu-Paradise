@@ -3,6 +3,8 @@
 import React, { useEffect, useState } from "react";
 //headless ui menu
 import { Menu } from "@headlessui/react";
+import logoWhite from '../assets/img/logo-white.svg';
+import logoBlack from '../assets/img/logo-dark.svg';
 //icons
 const Header = () => {
 
@@ -24,9 +26,9 @@ const Header = () => {
         {/* logo */}
         <a href="/">
           {header ? (
-            <h2 className="text-black" >VISHNU PARADISE</h2>
+            <img className=" w-[160px]" src={logoBlack} alt="" ></img>
           ) : (
-            <h2 className="text-white" >VISHNU PARADISE</h2>
+            <img className=" w-[160px]" src={logoWhite} alt="" ></img>
           )}
         </a>
         {/* nav */}
@@ -61,8 +63,8 @@ const Header = () => {
       <Menu.Items
         className="bg-white absolute w-full flex flex-col p-20px ">
         <ul className="text-black px-3 pr-0">
-          <li>Email</li>
-          <li>Mobile-Number</li>
+          <li>Email : vishnuparadisevja@gmail.com</li>
+          <li>Mobile : 9505823232</li>
         </ul>
           
       </Menu.Items>

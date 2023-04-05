@@ -23,24 +23,55 @@ import {
   FaCocktail,
 } from "react-icons/fa";
 
+import {
+  MdOutlineBathroom,
+  MdOutlineCoffeeMaker
+} from "react-icons/md";
+
+
+import {
+  Tb3DCubeSphere
+} from "react-icons/tb";
+
+import {
+  SlScreenDesktop
+} from 'react-icons/sl';
+
 export const roomData = [
   {
     id: 1,
-    name: "Standard Room",
+    name: 'Standard Room',
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      'This Standard king room features a tile/marble floor, air conditioning and patio.',
+      pricePerPerson : [
+        {name : "Single Person" , price : 1456 },
+        {name : "Double Person" , price : 1792 },
+        {name : "Extra Person/Bed" , price : 560 }
+      ],
     facilities: [
-      { name: "Wifi", icon: <FaWifi /> },
-      { name: "Coffee", icon: <FaCoffee /> },
-      { name: "Bath", icon: <FaBath /> },
-      { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
-      { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
-      { name: "Drinks", icon: <FaCocktail /> },
+      { name: 'Wifi', icon: <FaWifi /> },
+      { name: 'Coffee', icon: <FaCoffee /> },
+      { name: 'Bath', icon: <FaBath /> },
+      { name: 'Parking Space', icon: <FaParking /> },
+      { name: 'Breakfast', icon: <FaHotdog /> },
+      { name: 'Drinks', icon: <FaCocktail /> },
+      { name: 'AC', icon: <Tb3DCubeSphere/>  },
+      { name: 'Television', icon: <SlScreenDesktop />  }
+
     ],
-    size:15,
-    maxPerson: 4,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "15m²",
+    maxPerson: 3,
     price: 1456,
     image: Room1Img,
     imageLg: Room1ImgLg,
@@ -49,7 +80,12 @@ export const roomData = [
     id: 2,
     name: "Deluxe Room",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      "This Deluxe room has air conditioning, patio and seating area. You will get a Complementary Breakfast and a Coffee Kit from our side.",
+      pricePerPerson : [
+        {name : "Single Person" , price : 1680 },
+        {name : "Double Person" , price : 2016 },
+        {name : "Extra Person/Bed" , price : 560 }
+      ],
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
@@ -59,10 +95,25 @@ export const roomData = [
       { name: "Breakfast", icon: <FaHotdog /> },
       { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
+      { name: 'AC', icon: <Tb3DCubeSphere/>  },
+      { name: 'Television', icon: <SlScreenDesktop />  },
+      { name: 'Private Washroom', icon: <MdOutlineBathroom />  },
+      { name: 'Coffee machine', icon: <MdOutlineCoffeeMaker />  }
     ],
-    size: 17,
-    maxPerson: 4,
-    price: 220,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "17m²",
+    maxPerson: 3,
+    price: 1680,
     image: Room2Img,
     imageLg: Room2ImgLg,
   },
@@ -70,7 +121,12 @@ export const roomData = [
     id: 3,
     name: "Executive Room",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      "This Executive room features a patio, air conditioning and flat-screen Tv. You will get 2 water Bottles, Complementary Breakfast and Coffee kit from our side.",
+    pricePerPerson : [
+      {name : "Single Person" , price : 2240 },
+      {name : "Double Person" , price : 2576 },
+      {name : "Extra Person/Bed/Pet" , price : 560 }
+    ],
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
@@ -81,8 +137,19 @@ export const roomData = [
       { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
-    size: 50,
-    maxPerson: 3,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "20",
+    maxPerson:5,
     price: 2240,
     image: Room3Img,
     imageLg: Room3ImgLg,
@@ -91,7 +158,11 @@ export const roomData = [
     id: 4,
     name: "Restaurant",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      "Book our restaurant that has a capacity of 50 members for your needs Now.",
+      pricePerPerson : [
+        {name : "50 Persons" , price : 2240 },
+      ],
+      
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
@@ -102,8 +173,19 @@ export const roomData = [
       { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
-    size: 20,
-    maxPerson: 4,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "40",
+    maxPerson: 50,
     price: 289,
     image: Room4Img,
     imageLg: Room4ImgLg,
@@ -112,8 +194,12 @@ export const roomData = [
   {
     id: 5,
     name: "Meeting Hall",
+    pricePerPerson : [
+      {name : "20 Persons" , price : 2240 },
+    ],
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      "Meeting Hall that can contain 20 persons with no disturbance throughout your meeting time.",
+
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
@@ -124,8 +210,19 @@ export const roomData = [
       { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
-    size: 90,
-    maxPerson: 50,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "25",
+    maxPerson: 20,
     price: 320,
     image: Room5Img,
     imageLg: Room5ImgLg,
@@ -134,7 +231,10 @@ export const roomData = [
     id: 6,
     name: "Bulk Rooms",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Ea placeat eos sed voluptas unde veniam eligendi a. Quaerat molestiae hic omnis temporibus quos consequuntur nam voluptatum ea accusamus, corrupti nostrum eum placeat quibusdam quis beatae quae labore earum architecto aliquid debitis.",
+      "Introducing Bulk rooms, You can book upto 30 rooms based on your need. Maximum of 4 persons allowed in a single room",
+      pricePerPerson : [
+        {name : "Starting from" , price : 2500 },
+      ],
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
@@ -145,7 +245,18 @@ export const roomData = [
       { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
-    size: 45,
+    slideImages: [
+      {url : Room1Img,
+        caption : 'slide-1'
+      },
+      {url : Room2Img,
+        caption : 'slide-2'
+      },
+      {url : Room3Img,
+        caption : 'slide-3'
+      },
+    ],
+    size: "17m²",
     maxPerson: 4,
     price: 2500,
     image: Room6Img,

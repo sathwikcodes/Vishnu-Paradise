@@ -20,7 +20,7 @@ const Rooms = () => {
       <div className="container mx-auto lg:px-0">
         <div className="text-center">
           <div className="font-tertiary uppercase text-[15px] tracking-[6px]">
-            Hotel & Spa Adina
+            Hotel & Spa Vishnu Paradise
           </div>
           <h2 className="font-primary text-[45px] mb-4">Room & Suites</h2>
         </div>

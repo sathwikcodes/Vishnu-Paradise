@@ -1,6 +1,6 @@
 import React from "react";
 //logo
-import LogoWhite from "../assets/img/logo-white.svg";
+import logoWhite from '../assets/img/logo-white.svg';
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto text-white flex justify-between">
         {/* logo */}
         <a href="/">
-          <img src={LogoWhite} alt="" />
+        <img className=" w-[160px]" src={logoWhite} alt="" ></img>
         </a>
         Copyright &copy; 2022. All rights reserved.
       </div>
