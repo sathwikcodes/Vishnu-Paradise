@@ -9,7 +9,7 @@ const firebaseConfig = {
   storageBucket: "vishnu-paradise-8375e.appspot.com",
   messagingSenderId: "679455127787",
   appId: "1:679455127787:web:315e6bf260fe9855df66ae",
-  measurementId: "G-XT2HPK8BQ3",
+  measurementId: "G-XT2HPK8BQ3"
 };
 
 export const app = initializeApp(firebaseConfig);

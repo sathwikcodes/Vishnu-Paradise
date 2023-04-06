@@ -9,6 +9,8 @@ import Room4Img from "./assets/img/rooms/4.jpg";
 import Room4ImgLg from "./assets/img/rooms/4-lg.jpg";
 import Room5Img from "./assets/img/rooms/5.jpg";
 import Room5ImgLg from "./assets/img/rooms/5-lg.jpg";
+import Room1 from "./assets/img/rooms/8.jpg";
+import deluxe from './assets/img/rooms/9.jpg';
 
 // import icons
 import {
@@ -76,6 +78,9 @@ export const roomData = [
       {url : Room1ImgLg,
         caption : 'slide-2'
       },
+      {url : Room1,
+        caption : 'slide-3'
+      },
     ],
     size: "15m²",
     maxPerson: 3,
@@ -112,6 +117,9 @@ export const roomData = [
       },
       {url : Room2ImgLg,
         caption : 'slide-2'
+      },
+      {url : deluxe,
+        caption : 'slide-3'
       },
     ],
     size: "17m²",
@@ -152,7 +160,7 @@ export const roomData = [
       },
     ],
     size: "20",
-    maxPerson:5,
+    maxPerson:4,
     price: 2240,
     image: Room3Img,
     imageLg: Room3ImgLg,
