@@ -1,6 +1,6 @@
 import React from "react";
 //logo
-import logoWhite from '../assets/img/logo-white.svg';
+import LogoGold from "../assets/img/hotel-logo-gold.png"
 
 const Footer = () => {
   return (
@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto text-white flex justify-between">
         {/* logo */}
         <a href="/">
-        <img className=" w-[160px]" src={logoWhite} alt="" ></img>
+        <img className=" w-[100px]" src={LogoGold} alt="" ></img>
         </a>
-        Copyright &copy; 2022. All rights reserved.
+        Copyright &copy; 2023. All rights reserved.
       </div>
     </footer>
   );

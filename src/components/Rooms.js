@@ -18,8 +18,15 @@ const Rooms = () => {
         </div>
       )}
       <div className="container mx-auto lg:px-0">
+      
         <div className="text-center">
-          <div className="font-tertiary uppercase text-[15px] tracking-[6px]">
+        {/* <h2 className="font-primary text-[45px] mb-4">Contact Details</h2> */}
+        <div className="font-tertiary uppercase text-[15px] tracking-[6px]">
+        <h2 className="font-tertiary  uppercase text-[25px] tracking-[6px]">Mobile: +91-9505823232</h2>
+        <h2 className="font-tertiary uppercase text-[25px] tracking-[6px]">vishnuparadisevja@gmail.com</h2>
+          
+          </div>
+          <div className="font-tertiary mt-10 uppercase text-[15px] tracking-[6px]">
             Hotel & Spa Vishnu Paradise
           </div>
           <h2 className="font-primary text-[45px] mb-4">Room & Suites</h2>

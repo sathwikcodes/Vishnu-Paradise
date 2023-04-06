@@ -3,8 +3,8 @@
 import React, { useEffect, useState } from "react";
 //headless ui menu
 import { Menu } from "@headlessui/react";
-import logoWhite from '../assets/img/logo-white.svg';
-import logoBlack from '../assets/img/logo-dark.svg';
+import logoBlack from '../assets/img/hotel-logo-black.png';
+import logoGold from '../assets/img/hotel-logo-gold.png'
 //icons
 const Header = () => {
 
@@ -26,9 +26,9 @@ const Header = () => {
         {/* logo */}
         <a href="/">
           {header ? (
-            <img className=" w-[160px]" src={logoBlack} alt="" ></img>
+          <img className=" w-[120px]" src={logoBlack} alt="" ></img>  
           ) : (
-            <img className=" w-[160px]" src={logoWhite} alt="" ></img>
+          <img className=" w-[120px]" src={logoGold} alt="" ></img> 
           )}
         </a>
         {/* nav */}

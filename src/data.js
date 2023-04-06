@@ -9,8 +9,8 @@ import Room4Img from "./assets/img/rooms/4.jpg";
 import Room4ImgLg from "./assets/img/rooms/4-lg.jpg";
 import Room5Img from "./assets/img/rooms/5.jpg";
 import Room5ImgLg from "./assets/img/rooms/5-lg.jpg";
-import Room6Img from "./assets/img/rooms/6.jpg";
-import Room6ImgLg from "./assets/img/rooms/6-lg.jpg";
+// import Room6Img from "./assets/img/rooms/6.jpg";
+// import Room6ImgLg from "./assets/img/rooms/6-lg.jpg";
 // import icons
 import {
   FaWifi,
@@ -22,11 +22,22 @@ import {
   FaStopwatch,
   FaCocktail,
 } from "react-icons/fa";
+import {
+  BiCloset
+} from "react-icons/bi";
+
+import {
+  TbSofa
+} from "react-icons/tb";
 
 import {
   MdOutlineBathroom,
   MdOutlineCoffeeMaker
 } from "react-icons/md";
+
+import {
+  BiBed
+} from "react-icons/bi";
 
 
 import {
@@ -56,18 +67,17 @@ export const roomData = [
       { name: 'Breakfast', icon: <FaHotdog /> },
       { name: 'Drinks', icon: <FaCocktail /> },
       { name: 'AC', icon: <Tb3DCubeSphere/>  },
-      { name: 'Television', icon: <SlScreenDesktop />  }
+      { name: 'Television', icon: <SlScreenDesktop />  },
+      { name: 'Closet', icon: <BiCloset />  }
+
 
     ],
     slideImages: [
       {url : Room1Img,
         caption : 'slide-1'
       },
-      {url : Room2Img,
+      {url : Room1ImgLg,
         caption : 'slide-2'
-      },
-      {url : Room3Img,
-        caption : 'slide-3'
       },
     ],
     size: "15m²",
@@ -91,24 +101,20 @@ export const roomData = [
       { name: "Coffee", icon: <FaCoffee /> },
       { name: "Bath", icon: <FaBath /> },
       { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
       { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
       { name: 'AC', icon: <Tb3DCubeSphere/>  },
       { name: 'Television', icon: <SlScreenDesktop />  },
       { name: 'Private Washroom', icon: <MdOutlineBathroom />  },
-      { name: 'Coffee machine', icon: <MdOutlineCoffeeMaker />  }
+      { name: 'Coffee machine', icon: <MdOutlineCoffeeMaker />  },
+      { name: 'King beds', icon: <BiBed />  }
     ],
     slideImages: [
-      {url : Room1Img,
+      {url : Room2Img,
         caption : 'slide-1'
       },
-      {url : Room2Img,
+      {url : Room2ImgLg,
         caption : 'slide-2'
-      },
-      {url : Room3Img,
-        caption : 'slide-3'
       },
     ],
     size: "17m²",
@@ -132,20 +138,20 @@ export const roomData = [
       { name: "Coffee", icon: <FaCoffee /> },
       { name: "Bath", icon: <FaBath /> },
       { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
       { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
+      { name: 'Television', icon: <SlScreenDesktop />  },
+      { name: 'Private Washroom', icon: <MdOutlineBathroom />  },
+      { name: 'Coffee machine', icon: <MdOutlineCoffeeMaker />  },
       { name: "Drinks", icon: <FaCocktail /> },
+      { name: "Sofa", icon: <TbSofa /> },
+      { name: 'King beds', icon: <MdOutlineCoffeeMaker />  }
     ],
     slideImages: [
-      {url : Room1Img,
+      {url : Room3Img,
         caption : 'slide-1'
       },
-      {url : Room2Img,
+      {url : Room3ImgLg,
         caption : 'slide-2'
-      },
-      {url : Room3Img,
-        caption : 'slide-3'
       },
     ],
     size: "20",
@@ -166,22 +172,17 @@ export const roomData = [
     facilities: [
       { name: "Wifi", icon: <FaWifi /> },
       { name: "Coffee", icon: <FaCoffee /> },
-      { name: "Bath", icon: <FaBath /> },
+      { name: "Washrooms", icon: <FaBath /> },
       { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
       { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
     slideImages: [
-      {url : Room1Img,
+      {url : Room4Img,
         caption : 'slide-1'
       },
-      {url : Room2Img,
+      {url : Room4ImgLg,
         caption : 'slide-2'
-      },
-      {url : Room3Img,
-        caption : 'slide-3'
       },
     ],
     size: "40",
@@ -205,20 +206,12 @@ export const roomData = [
       { name: "Coffee", icon: <FaCoffee /> },
       { name: "Bath", icon: <FaBath /> },
       { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
       { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
       { name: "Drinks", icon: <FaCocktail /> },
     ],
     slideImages: [
-      {url : Room1Img,
+      {url : Room5Img,
         caption : 'slide-1'
-      },
-      {url : Room2Img,
-        caption : 'slide-2'
-      },
-      {url : Room3Img,
-        caption : 'slide-3'
       },
     ],
     size: "25",
@@ -236,14 +229,15 @@ export const roomData = [
         {name : "Starting from" , price : 2500 },
       ],
     facilities: [
-      { name: "Wifi", icon: <FaWifi /> },
-      { name: "Coffee", icon: <FaCoffee /> },
-      { name: "Bath", icon: <FaBath /> },
-      { name: "Parking Space", icon: <FaParking /> },
-      { name: "Swimming Pool", icon: <FaSwimmingPool /> },
-      { name: "Breakfast", icon: <FaHotdog /> },
-      { name: "GYM", icon: <FaStopwatch /> },
-      { name: "Drinks", icon: <FaCocktail /> },
+      { name: 'Wifi', icon: <FaWifi /> },
+      { name: 'Coffee', icon: <FaCoffee /> },
+      { name: 'Bath', icon: <FaBath /> },
+      { name: 'Parking Space', icon: <FaParking /> },
+      { name: 'Breakfast', icon: <FaHotdog /> },
+      { name: 'Drinks', icon: <FaCocktail /> },
+      { name: 'AC', icon: <Tb3DCubeSphere/>  },
+      { name: 'Television', icon: <SlScreenDesktop />  },
+      { name: 'Closet', icon: <BiCloset />  }
     ],
     slideImages: [
       {url : Room1Img,
@@ -259,7 +253,7 @@ export const roomData = [
     size: "17m²",
     maxPerson: 4,
     price: 2500,
-    image: Room6Img,
-    imageLg: Room6ImgLg,
+    image: Room3Img,
+    imageLg: Room3Img,
   },
 ];
