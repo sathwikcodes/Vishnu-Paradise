@@ -10,7 +10,6 @@ import Room4ImgLg from "./assets/img/rooms/4-lg.jpg";
 import Room5Img from "./assets/img/rooms/5.jpg";
 import Room5ImgLg from "./assets/img/rooms/5-lg.jpg";
 import Room1 from "./assets/img/rooms/8.jpg";
-import deluxe from './assets/img/rooms/9.jpg';
 import deluxe2 from "./assets/img/rooms/10.jpg";
 
 // import icons
