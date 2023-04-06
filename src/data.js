@@ -9,17 +9,14 @@ import Room4Img from "./assets/img/rooms/4.jpg";
 import Room4ImgLg from "./assets/img/rooms/4-lg.jpg";
 import Room5Img from "./assets/img/rooms/5.jpg";
 import Room5ImgLg from "./assets/img/rooms/5-lg.jpg";
-// import Room6Img from "./assets/img/rooms/6.jpg";
-// import Room6ImgLg from "./assets/img/rooms/6-lg.jpg";
+
 // import icons
 import {
   FaWifi,
   FaCoffee,
   FaBath,
   FaParking,
-  FaSwimmingPool,
   FaHotdog,
-  FaStopwatch,
   FaCocktail,
 } from "react-icons/fa";
 import {
